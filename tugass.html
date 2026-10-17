@@ -1,0 +1,1011 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amel's Little Wonderland ♡</title>
+
+<style>
+/* ===== BASIC STYLE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: #fff8fb;
+    color: #79566b;
+    overflow-x: hidden;
+}
+
+:root {
+    --pink: #f28caf;
+    --dark-pink: #ce648e;
+    --light-pink: #ffe4ee;
+    --lavender: #e9e2ff;
+    --blue: #dff3ff;
+    --yellow: #fff3c8;
+    --mint: #e1f7e9;
+    --white: #ffffff;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+section {
+    scroll-margin-top: 85px;
+}
+
+.section {
+    padding: 55px 7%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-title h2 {
+    color: var(--dark-pink);
+    font-size: clamp(25px, 4vw, 35px);
+    margin-bottom: 8px;
+}
+
+.section-title p {
+    font-size: 14px;
+}
+
+/* ===== FLOATING DECORATIONS ===== */
+.decor {
+    position: fixed;
+    z-index: 20;
+    pointer-events: none;
+    animation: floaty 3s ease-in-out infinite;
+    opacity: .8;
+}
+
+.decor-one {
+    left: 15px;
+    top: 30%;
+    font-size: 25px;
+}
+
+.decor-two {
+    right: 18px;
+    top: 55%;
+    font-size: 23px;
+    animation-delay: 1s;
+}
+
+.decor-three {
+    right: 8%;
+    top: 18%;
+    font-size: 18px;
+    animation-delay: .5s;
+}
+
+@keyframes floaty {
+    0%, 100% { transform: translateY(0) rotate(-8deg); }
+    50% { transform: translateY(-15px) rotate(8deg); }
+}
+
+@keyframes bunnyHop {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    35% { transform: translateY(-20px) rotate(-5deg); }
+    65% { transform: translateY(-10px) rotate(5deg); }
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: .35; transform: scale(.8); }
+    50% { opacity: 1; transform: scale(1.25); }
+}
+
+@keyframes drift {
+    0% { transform: translateY(20px); opacity: 0; }
+    20% { opacity: .9; }
+    80% { opacity: .9; }
+    100% { transform: translateY(-100px); opacity: 0; }
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 16px 7%;
+    background: rgba(255, 255, 255, .92);
+    border-bottom: 2px solid #ffe0ec;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    color: var(--dark-pink);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo span {
+    display: inline-block;
+    animation: wiggle 2s infinite;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+}
+
+.nav-links a {
+    display: block;
+    padding: 9px 13px;
+    border-radius: 22px;
+    font-size: 13px;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    background: var(--light-pink);
+    color: var(--dark-pink);
+    transform: translateY(-3px);
+}
+
+/* ===== HERO ===== */
+.hero {
+    min-height: 540px;
+    position: relative;
+    overflow: hidden;
+    padding: 75px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:
+        radial-gradient(circle at 15% 20%, #fff3c8 0 5%, transparent 5.5%),
+        radial-gradient(circle at 85% 75%, #e4ddff 0 8%, transparent 8.5%),
+        linear-gradient(135deg, #ffe1ec, #fff5f8, #e9e3ff);
+}
+
+.hero::before,
+.hero::after {
+    content: "✦";
+    position: absolute;
+    color: #f4a7c4;
+    font-size: 42px;
+    animation: sparkle 2s infinite;
+}
+
+.hero::before {
+    top: 15%;
+    left: 12%;
+}
+
+.hero::after {
+    bottom: 17%;
+    right: 12%;
+    animation-delay: .7s;
+}
+
+.hero-content {
+    max-width: 760px;
+    position: relative;
+    z-index: 2;
+}
+
+.eyebrow {
+    display: inline-block;
+    background: white;
+    color: var(--dark-pink);
+    border: 1px solid #ffd3e3;
+    padding: 8px 18px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    color: #c95d89;
+    font-size: clamp(38px, 7vw, 72px);
+    line-height: 1.12;
+    margin-bottom: 18px;
+    text-shadow: 3px 4px 0 #ffffff;
+}
+
+.hero h1 span {
+    color: #9679ce;
+}
+
+.hero p {
+    max-width: 580px;
+    margin: 0 auto 25px;
+    line-height: 1.9;
+}
+
+.hero-bunnies {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.bunny {
+    display: inline-block;
+    font-size: 65px;
+    animation: bunnyHop 2s ease-in-out infinite;
+    filter: drop-shadow(0 6px 5px #dca1bd66);
+}
+
+.bunny:nth-child(2) {
+    animation-delay: .35s;
+}
+
+.bunny:nth-child(3) {
+    animation-delay: .7s;
+}
+
+.button {
+    display: inline-block;
+    padding: 13px 25px;
+    margin: 5px;
+    background: linear-gradient(135deg, #f6a4c1, #df78a1);
+    color: white;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 6px 15px #df78a144;
+    transition: .3s;
+}
+
+.button:hover {
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 10px 20px #df78a155;
+}
+
+.button.secondary {
+    background: white;
+    color: var(--dark-pink);
+}
+
+/* ===== MINI STICKERS ===== */
+.sticker {
+    position: absolute;
+    font-size: 38px;
+    animation: floaty 3s infinite;
+}
+
+.sticker.left {
+    left: 5%;
+    bottom: 12%;
+}
+
+.sticker.right {
+    right: 5%;
+    top: 12%;
+    animation-delay: 1s;
+}
+
+/* ===== ABOUT ===== */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 25px;
+    align-items: stretch;
+}
+
+.profile-card,
+.info-card {
+    border-radius: 25px;
+    padding: 30px;
+    background: white;
+    border: 2px solid #ffe1ec;
+    box-shadow: 0 8px 25px #d99ab21c;
+}
+
+.profile-card {
+    text-align: center;
+    background: linear-gradient(150deg, #fff0f5, white);
+}
+
+.avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 0 auto 18px;
+    display: grid;
+    place-items: center;
+    font-size: 75px;
+    background: linear-gradient(135deg, #ffd8e7, #e7dcff);
+    border: 5px solid white;
+    box-shadow: 0 5px 15px #cc82a544;
+    animation: bunnyHop 3s infinite;
+}
+
+.profile-card h3 {
+    color: var(--dark-pink);
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.profile-card p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.mini-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 18px;
+}
+
+.tag {
+    padding: 6px 11px;
+    border-radius: 20px;
+    background: var(--light-pink);
+    font-size: 12px;
+}
+
+.info-card h3 {
+    color: var(--dark-pink);
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.fact {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px dashed #f4cada;
+    font-size: 14px;
+}
+
+.fact:last-child {
+    border-bottom: none;
+}
+
+.fact strong {
+    color: #c95d89;
+}
+
+/* ===== HOBBIES ===== */
+.hobby-section {
+    background: linear-gradient(180deg, #fff8fb, #fff0f6);
+}
+
+.hobby-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.hobby {
+    padding: 25px;
+    border-radius: 23px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 7px 20px #b77c9516;
+    transition: .3s;
+}
+
+.hobby:hover {
+    transform: translateY(-8px) rotate(-1deg);
+}
+
+.hobby:nth-child(1) { background: #fff0e5; }
+.hobby:nth-child(2) { background: #e8f4ff; }
+.hobby:nth-child(3) { background: #f0e9ff; }
+.hobby:nth-child(4) { background: #ffe7f0; }
+.hobby:nth-child(5) { background: #e3f8ec; }
+.hobby:nth-child(6) { background: #fff5ce; }
+
+.hobby-icon {
+    font-size: 42px;
+    display: inline-block;
+    margin-bottom: 10px;
+    animation: wiggle 3s infinite;
+}
+
+.hobby h3 {
+    color: #bd6088;
+    margin-bottom: 9px;
+}
+
+.hobby p {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* ===== FAVORITE THINGS ===== */
+.favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.favorite-box {
+    padding: 28px;
+    background: white;
+    border: 2px solid #fce0eb;
+    border-radius: 25px;
+}
+
+.favorite-box h3 {
+    color: var(--dark-pink);
+    margin-bottom: 15px;
+}
+
+.favorite-list {
+    list-style: none;
+}
+
+.favorite-list li {
+    padding: 11px;
+    margin: 8px 0;
+    background: #fff5f8;
+    border-radius: 12px;
+    font-size: 14px;
+    transition: .25s;
+}
+
+.favorite-list li:hover {
+    background: #ffe3ed;
+    transform: translateX(5px);
+}
+
+/* ===== GOALS ===== */
+.goals {
+    background: linear-gradient(135deg, #f1eaff, #fff1f6);
+    border-radius: 25px;
+    padding: 30px;
+}
+
+.goal {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 12px 0;
+    border-bottom: 1px dashed #d9c6ee;
+}
+
+.goal:last-child {
+    border-bottom: none;
+}
+
+.goal span {
+    font-size: 20px;
+}
+
+/* ===== QUOTE ===== */
+.quote {
+    text-align: center;
+    background: linear-gradient(135deg, #ffe0eb, #e8e0ff, #e0f5ff);
+    padding: 45px 25px;
+    border-radius: 30px;
+    margin: 30px 0;
+}
+
+.quote .quote-bunny {
+    font-size: 55px;
+    display: inline-block;
+    animation: bunnyHop 2s infinite;
+}
+
+.quote blockquote {
+    font-size: clamp(21px, 3vw, 30px);
+    font-weight: bold;
+    color: #a56a9b;
+    margin: 15px auto;
+    max-width: 700px;
+}
+
+.quote p {
+    font-size: 13px;
+}
+
+/* ===== GALLERY ===== */
+.gallery-section {
+    background: #fff9fc;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.gallery-item {
+    min-height: 180px;
+    border: 5px solid white;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px #bc78951c;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 20px;
+    transition: .3s;
+}
+
+.gallery-item:hover {
+    transform: rotate(2deg) scale(1.03);
+}
+
+.gallery-item span {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.gallery-item p {
+    font-size: 13px;
+}
+
+.gallery-item:nth-child(1) { background: #ffe4ed; }
+.gallery-item:nth-child(2) { background: #e5edff; }
+.gallery-item:nth-child(3) { background: #fff0d8; }
+.gallery-item:nth-child(4) { background: #e2f8eb; }
+.gallery-item:nth-child(5) { background: #f1e5ff; }
+.gallery-item:nth-child(6) { background: #dff6ff; }
+
+/* ===== CONTACT ===== */
+.contact-section {
+    text-align: center;
+    background: linear-gradient(135deg, #ffe5ef, #fff4d8);
+}
+
+.contact-card {
+    max-width: 720px;
+    margin: auto;
+    padding: 35px;
+    border-radius: 28px;
+    background: white;
+    box-shadow: 0 8px 25px #cf88a51b;
+}
+
+.contact-card h2 {
+    color: var(--dark-pink);
+    margin-bottom: 12px;
+}
+
+.contact-bunny {
+    font-size: 75px;
+    display: inline-block;
+    animation: bunnyHop 2s infinite;
+    margin-bottom: 10px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: linear-gradient(135deg, #e8dcff, #ffdce9);
+    text-align: center;
+    padding: 28px 15px;
+    color: #8c638c;
+    font-size: 13px;
+}
+
+footer .signature {
+    font-size: 21px;
+    font-weight: bold;
+    color: #c85e8b;
+    margin-bottom: 7px;
+}
+
+footer .footer-bunny {
+    font-size: 32px;
+    display: inline-block;
+    animation: bunnyHop 2s infinite;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+    .about-grid,
+    .favorites-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hobby-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        min-height: 480px;
+        padding: 60px 6%;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 40px 5%;
+    }
+
+    .hobby-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .fact {
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .profile-card,
+    .info-card,
+    .favorite-box {
+        padding: 22px;
+    }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="decor decor-one">♡</div>
+<div class="decor decor-two">✿</div>
+<div class="decor decor-three">✧</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="#home" class="logo">🐰 Amel's Wonderland <span>♡</span></a>
+
+    <ul class="nav-links">
+        <li><a href="#home">🏠 Home</a></li>
+        <li><a href="#about">🌷 About Me</a></li>
+        <li><a href="#hobbies">🎀 Hobbies</a></li>
+        <li><a href="#gallery">🧸 Gallery</a></li>
+        <li><a href="#contact">💌 Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="home">
+    <span class="sticker left">🌼</span>
+    <span class="sticker right">⭐</span>
+
+    <div class="hero-content">
+        <span class="eyebrow">୨୧ welcome to my little world ୨୧</span>
+
+        <h1>Amel's Little<br><span>Wonderland ♡</span></h1>
+
+        <p>
+            a little corner of the internet made with love,
+            dreams, pastel colors, and a tiny bit of magic.
+            hi, i'm amel! welcome to my happy place 🎀
+        </p>
+
+        <div class="hero-bunnies">
+            <span class="bunny">🐰</span>
+            <span class="bunny">🎀</span>
+            <span class="bunny">🐇</span>
+        </div>
+
+        <a href="#about" class="button">get to know me ♡ →</a>
+        <a href="#hobbies" class="button secondary">explore more ✿</a>
+    </div>
+</header>
+
+<!-- ABOUT ME -->
+<section class="section" id="about">
+    <div class="section-title">
+        <h2>୨୧ a little about me ୨୧</h2>
+        <p>just a girl with big dreams and a soft spot for cute things ♡</p>
+    </div>
+
+    <div class="about-grid">
+        <div class="profile-card">
+            <div class="avatar">🐰</div>
+
+            <h3>hello, i'm amel! 🎀</h3>
+
+            <p>
+                a girl who is learning, growing, dreaming,
+                and trying to become a better version of herself
+                every single day.
+            </p>
+
+            <div class="mini-tags">
+                <span class="tag">🌷 dreamer</span>
+                <span class="tag">💻 coder</span>
+                <span class="tag">🎧 music lover</span>
+                <span class="tag">♡ soft heart</span>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h3>🎀 my little facts</h3>
+
+            <div class="fact">
+                <span>🌸 name</span>
+                <strong>Amelia Puspitasari</strong>
+            </div>
+
+            <div class="fact">
+                <span>🎂 birthday</span>
+                <strong>14 February</strong>
+            </div>
+
+            <div class="fact">
+                <span>🎓 major</span>
+                <strong>Teknik Informatika</strong>
+            </div>
+
+            <div class="fact">
+                <span>💻 currently learning</span>
+                <strong>HTML, CSS & Python</strong>
+            </div>
+
+            <div class="fact">
+                <span>🎨 favorite vibe</span>
+                <strong>pink, pastel & cozy</strong>
+            </div>
+
+            <div class="fact">
+                <span>🌈 life motto</span>
+                <strong>little steps, big dreams</strong>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HOBBIES -->
+<section class="section hobby-section" id="hobbies">
+    <div class="section-title">
+        <h2>♡ things i love ♡</h2>
+        <p>little things that make my days more colorful!</p>
+    </div>
+
+    <div class="hobby-grid">
+        <article class="hobby">
+            <span class="hobby-icon">💻</span>
+            <h3>coding</h3>
+            <p>Creating things with code, learning new skills, and making my own little websites.</p>
+        </article>
+
+        <article class="hobby">
+            <span class="hobby-icon">📈</span>
+            <h3>trading</h3>
+            <p>Learning about charts, market movements, analysis, and responsible risk management.</p>
+        </article>
+
+        <article class="hobby">
+            <span class="hobby-icon">🎧</span>
+            <h3>music</h3>
+            <p>Listening to songs that match my mood while enjoying my own little world.</p>
+        </article>
+
+        <article class="hobby">
+            <span class="hobby-icon">🎨</span>
+            <h3>aesthetic things</h3>
+            <p>Pastel colors, cute layouts, pretty stationery, and creative little projects.</p>
+        </article>
+
+        <article class="hobby">
+            <span class="hobby-icon">📚</span>
+            <h3>learning</h3>
+            <p>Exploring new knowledge and slowly improving myself one day at a time.</p>
+        </article>
+
+        <article class="hobby">
+            <span class="hobby-icon">✈️</span>
+            <h3>big dreams</h3>
+            <p>Dreaming of new places, exciting experiences, and a bright future.</p>
+        </article>
+    </div>
+</section>
+
+<!-- FAVORITE THINGS -->
+<section class="section">
+    <div class="section-title">
+        <h2>🎀 my favorite things</h2>
+        <p>a tiny collection of things that feel like me</p>
+    </div>
+
+    <div class="favorites-grid">
+        <div class="favorite-box">
+            <h3>🎨 favorite colors</h3>
+            <ul class="favorite-list">
+                <li>🩷 pastel pink — sweet & cozy</li>
+                <li>💜 lavender — dreamy & peaceful</li>
+                <li>🤍 cream — warm & soft</li>
+                <li>🩵 baby blue — fresh & happy</li>
+                <li>💚 mint — calm little energy</li>
+            </ul>
+        </div>
+
+        <div class="favorite-box">
+            <h3>🎧 on my playlist</h3>
+            <ul class="favorite-list">
+                <li>🎵 Lana Del Rey</li>
+                <li>🎸 Green Day</li>
+                <li>🖤 Linkin Park</li>
+                <li>🤘 Slipknot</li>
+                <li>🌙 songs for late-night thoughts</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- GOALS -->
+<section class="section">
+    <div class="section-title">
+        <h2>🌈 dreams i'm working on</h2>
+        <p>every big dream starts with a tiny step ♡</p>
+    </div>
+
+    <div class="goals">
+        <div class="goal">
+            <span>🎓</span>
+            <p>Keep learning and finish college with new skills and experience.</p>
+        </div>
+
+        <div class="goal">
+            <span>💻</span>
+            <p>Build useful projects and become more confident at programming.</p>
+        </div>
+
+        <div class="goal">
+            <span>🌷</span>
+            <p>Grow into a more independent, patient, and confident person.</p>
+        </div>
+
+        <div class="goal">
+            <span>🏡</span>
+            <p>Make my family proud and give them more happy experiences.</p>
+        </div>
+
+        <div class="goal">
+            <span>✈️</span>
+            <p>Explore new places and make beautiful memories along the way.</p>
+        </div>
+    </div>
+
+    <div class="quote">
+        <span class="quote-bunny">🐰</span>
+
+        <blockquote>
+            "small steps every day<br>
+            make big dreams come true ♡"
+        </blockquote>
+
+        <p>— a little reminder from amel to amel 🌷</p>
+    </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section gallery-section" id="gallery">
+    <div class="section-title">
+        <h2>📸 my little gallery</h2>
+        <p>cute moments, cozy things, and happy little memories</p>
+    </div>
+
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <div>
+                <span>💻</span>
+                <h3>coding corner</h3>
+                <p>one more line of code!</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div>
+                <span>🌷</span>
+                <h3>flower diary</h3>
+                <p>stop and enjoy the little things</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div>
+                <span>🧸</span>
+                <h3>cozy moments</h3>
+                <p>soft blankets & happy thoughts</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div>
+                <span>☁️</span>
+                <h3>daydreaming</h3>
+                <p>somewhere under the clouds</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div>
+                <span>🎀</span>
+                <h3>pink collection</h3>
+                <p>everything looks cuter in pink</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div>
+                <span>🐰</span>
+                <h3>bunny club</h3>
+                <p>officially a bunny lover ♡</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact-section" id="contact">
+    <div class="contact-card">
+        <div class="contact-bunny">🐰💗</div>
+
+        <h2>you made it to the end!</h2>
+
+        <p>
+            thank you for visiting my little wonderland.
+            i hope your day is filled with good things,
+            warm hugs, and tiny reasons to smile. ♡
+        </p>
+
+        <a href="#home" class="button">back to the top ↑</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <span class="footer-bunny">🐇</span>
+
+    <p class="signature">made with ♡ by amel</p>
+
+    <p>a little corner of the internet, made with love 🎀</p>
+
+    <p>© 2026 Amel's Little Wonderland · all rights reserved</p>
+
+    <p>stay soft, stay kind, keep dreaming ✿</p>
+</footer>
+
+</body>
+</html>
